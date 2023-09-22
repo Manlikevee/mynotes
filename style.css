@@ -382,7 +382,7 @@ header{
 @media screen and (max-width:900px) {
     .sidemenu{
         position: absolute;
-        left: -26%;
+        left: -46%;
         top: 0;
     }
     .overlay {
@@ -405,7 +405,7 @@ header{
     .sideactive{
         position:absolute;
 left: 0;
-width: 40%;
+width: 60%;
 top: 0;
     }
 
@@ -416,6 +416,9 @@ top: 0;
     }
     .content{
         margin-top: 20px;
+    }
+    .centerbox{
+        width: 100%;
     }
   
 }
