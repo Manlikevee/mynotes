@@ -9,8 +9,9 @@
     <title>Nowted App</title>
 </head>
 <body>
+    <div class="overlay" id="overlay"></div>
     <header>
-        <div class="nvtoggle">
+        <div class="nvtoggle" id="open-btn">
             <span class="material-symbols-outlined">
                 menu
                 </span>
@@ -18,14 +19,14 @@
     
     </header>
     <div class="notecontainer">
-    <div class="sidemenu">
+    <div class="sidemenu" id="sidebar">
 <div class="head">
     <div class="logo">
       <a href="index.html"><img src="Group 1.png" alt=""></a>  
     </div>
-    <div class="search">
+    <div class="search" id="close-btn">
         <span class="material-symbols-outlined">
-            search
+            disabled_by_default
             </span>
     </div>
 </div>
@@ -40,11 +41,11 @@
    Recent 
 </div>
 <div class="recentnotes">
-    <div class="recenttitle activetitle">
+    <a href="view.html" class="recenttitle activetitle">
         <span class="material-symbols-outlined">
             description
             </span>
-            Project proposal</div>
+            Project proposal</a>
 
     <div class="recenttitle">
         <span class="material-symbols-outlined">
@@ -250,7 +251,7 @@
       const bottom = document.querySelector('.allnotes');
     
       // Calculate the available space (viewport height - content height)
-      const availableSpace = window.innerHeight - content.getBoundingClientRect().height - 20;
+      const availableSpace = window.innerHeight - content.getBoundingClientRect().height - 25;
     
       // Set the maximum height of the bottom div (ensure it's not negative)
       bottom.style.maxHeight = `${Math.max(availableSpace, 0)}px`;
@@ -264,6 +265,8 @@
     
         
     </script>
+
+<script src="script.js"></script>
 
 </body>
 </html>

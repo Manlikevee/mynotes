@@ -11,8 +11,9 @@
     <title>Nowted App</title>
 </head>
 <body>
+    <div class="overlay" id="overlay"></div>
     <header>
-        <div class="nvtoggle">
+        <div class="nvtoggle" id="open-btn">
             <span class="material-symbols-outlined">
                 menu
                 </span>
@@ -20,14 +21,14 @@
     
     </header>
     <div class="notecontainer">
-        <div class="sidemenu">
+        <div class="sidemenu" id="sidebar">
             <div class="head">
                 <div class="logo">
                   <a href="index.html"><img src="Group 1.png" alt=""></a>  
                 </div>
-                <div class="search">
+                <div class="search" id="close-btn">
                     <span class="material-symbols-outlined">
-                        search
+                        disabled_by_default
                         </span>
                 </div>
             </div>
@@ -280,7 +281,7 @@
 
     </script>
 
-
+<script src="script.js"></script>
 <script>
     function setBottomMaxHeight() {
   const container = document.querySelector('.notepreview');
