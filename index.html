@@ -9,11 +9,19 @@
     <title>Nowted App</title>
 </head>
 <body>
+    <header>
+        <div class="nvtoggle">
+            <span class="material-symbols-outlined">
+                menu
+                </span>
+        </div>
+    
+    </header>
     <div class="notecontainer">
     <div class="sidemenu">
 <div class="head">
     <div class="logo">
-        <img src="Group 1.png" alt="">
+      <a href="index.html"><img src="Group 1.png" alt=""></a>  
     </div>
     <div class="search">
         <span class="material-symbols-outlined">
@@ -22,11 +30,11 @@
     </div>
 </div>
 
-<div class="newnote">
+<a href="tinymce.html" class="newnote">
     <button><span class="material-symbols-outlined">
         add
         </span> New Note</button>
-</div>
+    </a>
 
 <div class="recenttext">
    Recent 
@@ -84,7 +92,7 @@
     <div class="notecontent">
     
         <div class="head">
-<h3>    Personal</h3>
+<h3>    All Notes</h3>
         </div>
 <br>
         <div class="allnotes">
@@ -97,16 +105,16 @@
             It's hard to believe that It's hard to believe that It's hard to believe that It's hard to believe that  ... ...
         </div>
     </div>
-    <div class="note">
+    <a href="view.html" class="note">
         <div class="notetitle">
             My Goals for the Next Year My Goals for the Next Year
         </div>
         <div class="mynotebody">
             It's hard to believe that It's hard to believe that It's hard to believe that It's hard to believe that  ... ...
         </div>
-    </div>
+    </a>
 
-    <div class="note">
+    <div class="note activenote">
         <div class="notetitle">
             My Goals for the Next Year My Goals for the Next Year
         </div>
@@ -220,17 +228,42 @@
     
     </div>
     <div class="notebody">
-
-
-        <div class="centerbox">
-            <div class="centericon">
-                <img src="Frame.svg" alt="">
-            </div>
-            <div class="centertext">   Select a note to view</div>
-            <div class="centersmalltext">Choose a note from the list on the left to view its contents, or create a new note to add to your collection.</div>
-         
+<div class="emptynote">
+    <div class="centerbox">
+        <div class="centericon">
+            <img src="Frame.svg" alt="">
         </div>
+        <div class="centertext">   Select a note to view</div>
+        <div class="centersmalltext">Choose a note from the list on the left to view its contents, or create a new note to add to your collection.</div>
+     
+    </div>
+</div>
+
+
     </div>
     </div>
+
+    <script>
+        function setBottomMaxHeights() {
+      const container = document.querySelector('.notecontent');
+      const content = document.querySelector('.head');
+      const bottom = document.querySelector('.allnotes');
+    
+      // Calculate the available space (viewport height - content height)
+      const availableSpace = window.innerHeight - content.getBoundingClientRect().height - 20;
+    
+      // Set the maximum height of the bottom div (ensure it's not negative)
+      bottom.style.maxHeight = `${Math.max(availableSpace, 0)}px`;
+    }
+    
+    // Initial calculation when the page loads
+    setBottomMaxHeights();
+    
+    // Recalculate when the window is resized
+    window.addEventListener('resize', setBottomMaxHeights);
+    
+        
+    </script>
+
 </body>
 </html>
