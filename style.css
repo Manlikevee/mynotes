@@ -1,0 +1,251 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('SourceSansPro-Light.otf') format('opentype');
+    /* You can also specify other font formats here, like woff and woff2, for better browser compatibility */
+  }
+
+*,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Source Sans Pro;
+    
+}
+::-webkit-scrollbar { width: 7px; }
+
+::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.03); }
+
+::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.153); }
+
+::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.229); }
+
+
+body{
+    background: #181818;
+    color: #FFF;
+}
+
+.notecontainer{
+    width: 100%;
+display: flex;
+height: 100vh;
+
+}
+.sidemenu{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+ 
+}
+.notecontent{
+    width: 34%;
+    padding: 10px;
+    background: #1C1C1C;
+}
+.notebody{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head{
+    display: flex;
+    padding: 14px;
+    align-items: center;
+    justify-content: space-between;
+}
+@media screen and (max-width:1300px) {
+    .notecontainer{
+     width: 100%;
+     padding: 10px;
+    }
+    
+}
+.newnote{
+    padding: 15px;
+
+}
+
+.newnote button{
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #FFF;
+font-family: Source Sans Pro;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+display: flex;
+justify-content: center;
+gap: 10px;
+line-height: normal;
+width: 100%;
+padding: 9px;
+border: none;
+align-items: center;
+transition: 0.5s ease-in-out;
+
+}
+
+.newnote button:hover{
+    background: rgba(255, 255, 255, 0.153); 
+}
+
+.recenttitle{
+    display: flex;
+padding:  15px;
+align-items: flex-start;
+gap: 10px;
+cursor: pointer;
+align-self: stretch;
+transition: 0.5s ease-in-out;
+color: rgba(255, 255, 255, 0.60);
+font-family: Source Sans Pro;
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+
+letter-spacing: normal;
+}
+
+.activetitle , .recenttitle:hover{
+
+    background: rgba(255, 255, 255, 0.03);
+    color: white;
+}
+
+.recenttext{
+    color: rgba(255, 255, 255, 0.60);
+font-family: Source Sans Pro;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+padding-left:  15px;
+}
+
+
+.profiledata{
+    margin-top: auto;
+    display: flex;
+    padding: 9px;
+    background: rgba(221, 221, 221, 0.087);
+    color: white;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.60);
+    font-family: Source Sans Pro;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 800;
+    align-items: center;
+    
+}
+
+.myprofiledata{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.myprofiledata small{
+    font-size: small;
+    font-size: 200;
+}
+.profiledata img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+
+}
+
+.allnotes{
+    max-height: 83vh;
+    overflow: auto;
+}
+
+.allnotesflex{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.note{
+    display: flex;
+padding: 20px;
+flex-direction: column;
+align-items: flex-start;
+gap: 5px;
+align-self: stretch;
+border-radius: 3px;
+background: rgba(255, 255, 255, 0.03);
+transition: 0.5s ease-in-out;
+cursor: pointer;
+}
+.note:hover{
+    background: rgba(255, 255, 255, 0.057);
+}
+
+.notetitle{
+    color: #FFF;
+font-family: Source Sans Pro;
+font-size: 17px;
+font-style: normal;
+font-weight: 600;
+line-height: 28px; /* 155.556% */
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+display: -webkit-box;
+overflow: hidden;
+overflow-wrap: break-word;
+}
+.mynotebody{
+    color: rgba(255, 255, 255, 0.60);
+font-family: Source Sans Pro;
+font-size: 16px;
+font-style: normal;
+font-weight: 300;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+display: -webkit-box;
+overflow: hidden;
+overflow-wrap: break-word;
+}
+.activenote{
+    border-radius: 3px;
+background: rgba(255, 255, 255, 0.10);
+}
+
+.centerbox{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.centertext{
+    color: #FFF;
+font-family: Source Sans Pro;
+font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-align: center;
+}
+
+.centersmalltext{
+    color: rgba(255, 255, 255, 0.60);
+    text-align: center;
+    font-family: Source Sans Pro;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */  
+}
